@@ -1,0 +1,330 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*===================================================
+					C O L O R S
+===================================================*/
+
+/*
+Nice blue - #5494f9
+
+Nice red - #f95454
+
+Nice green - #c0f954
+
+Nice orange - #ffe896
+Light orange - #fce9a4
+Very light orange - #ffeeb5
+
+Dark grey - #707070
+Light grey - #bfbfbf
+
+Black - #000000
+
+White - #ffffff
+*/
+
+/*===================================================
+					F O N T S
+===================================================*/
+
+@font-face {
+	font-family: yellowsun;
+	src: url(../fonts/yellowsun.otf);
+}
+
+@font-face {
+	font-family: birch;
+	src: url(../fonts/birch.ttf);
+}
+
+@font-face {
+	font-family: parsek;
+	src: url(../fonts/parsek.ttf);
+}
+
+/*===================================================
+					G L O B A L
+===================================================*/
+
+
+
+/*===================================================
+					L A Y O U T
+===================================================*/
+html {
+	font-family: yellowsun;
+}
+
+/*------------*/
+
+.wrapper {
+	padding: 10px;
+}
+
+	.wrapper div {
+		margin-bottom: 10px;
+		box-shadow: 1px 1px 5px black;
+	}
+
+/*------------*/	
+	
+#header {
+	background-color: black;
+	padding: 50px 5% 20px 5%;
+	
+	color: white;
+	overflow: hidden;
+}
+
+	#header h1 {
+		display: inline-block;
+		
+		font-size: 48px;
+		font-weight: 700;
+		letter-spacing: 10px;
+		text-align: center;
+	}
+	
+		#header h1 a {
+			text-decoration: none;
+			color: white;
+		}
+		
+	#header h1:hover {
+		background-color: #707070;
+	}
+	
+	#clock {
+		float: right;
+		margin-top: 4px;
+		box-shadow: none;
+		
+		font-size: 40px;
+		letter-spacing: 10px;
+		text-align: center;
+	}
+	
+/*------------*/	
+	
+#navbar {
+	width: 100%;
+	position: fixed;
+	box-shadow: none !important;
+	z-index: 100000000;
+	
+	color: white;
+	text-align: center;
+}
+	
+	#navbar ul {
+		display: none;
+		padding: 10px;
+		background-color: black;
+	}
+	
+		#navbar ul li {
+			display: inline;
+		}
+		
+			#navbar ul li a {
+				padding: 9px 5% 9px 5%;
+				
+				color: white;
+				font-size: 24px;
+				text-decoration: none;
+				letter-spacing: 5px;
+			}
+		
+			@media (max-width: 1000px) {
+				#navbar ul li a {
+					display: block;
+					margin: auto;
+					padding: 2px;
+				}
+			}
+			
+			#navbar ul li a:hover {
+				background-color: #707070;
+			}
+
+	#navbar #controller {
+		padding: 5px 20px 5px 20px;
+		background-color: black;
+		box-shadow: 1px 1px 5px black;
+		border: 1px solid white;
+		
+		font-size: 20px;
+		text-shadow: 0px 0px 20px white;
+		letter-spacing: 5px;
+	}
+	
+		#navbar #controller:hover {
+			cursor: pointer;
+			background-color: #707070;
+		}
+	
+		@media (max-width:1000px) {
+			#navbar #controller {
+				padding: 10px;
+			}
+		}
+
+/*------------*/
+		
+.container {
+	padding: 5%;
+	
+	text-indent: 20px;
+}
+
+	.container h1 {
+		margin: 50px 0px 100px 0px;
+		
+		font-size: 40px;
+		letter-spacing: 5px;
+		line-height: 50px;
+	}
+	
+	.container p {
+		margin-bottom: 15px;
+		
+		font-size: 25px;
+		letter-spacing: 2px;
+		line-height: 50px;
+		font-weight: 600;
+	}
+
+/*------------*/
+	
+#carousel {
+	position: relative;
+	top: -150px;
+	margin-bottom: -200px;
+	padding: 80px 0px 50px 0px;
+	box-shadow: none;
+	overflow: hidden;
+	
+	text-align: center;
+}
+
+	#carousel img {
+		position: relative;
+		margin-left: -20px;
+		height: 200px;
+		border: 2px solid white;
+		box-sizing: border-box;
+		box-shadow: 1px 1px 5px black;
+	}
+	
+	#carousel img:hover {
+		box-shadow: 0px 0px 30px black;
+		cursor: pointer;
+		z-index: 50000;
+	}
+
+/*------------*/
+	
+#preview {
+	box-shadow: none;
+	
+	text-align: center;
+}
+
+	#preview img {
+		height:800px;
+		border: 5px solid white;
+		box-sizing: border-box;
+		box-shadow: 1px 1px 5px black;
+	}
+		
+	#preview img:hover {
+		box-shadow: 0px 0px 30px black;
+		cursor: pointer;
+	}
+	
+	#preview p {
+		position: relative;
+		width: 50%;
+		z-index: 50005;
+		top: -600px;
+		left: 500px;
+		
+		color: white;
+		font-size: 24px;
+		text-shadow: 1px 1px 5px black;
+	}
+	
+	#preview p {
+		cursor: pointer;
+	}
+	
+	@media (max-width: 1000px) {
+		#preview {
+			display: none !important;
+		}
+	}
+
+/*------------*/
+	
+#footer {
+	position: relative;
+	margin-bottom: 0px;
+	padding: 1% 5% 1% 5%;
+	background-color: black;
+	z-index: 50001;
+	
+}
+
+	#footer p {
+		color: white;
+		font-size: 14px;
+		letter-spacing: 2px;
+		line-height: 28px;
+	}
